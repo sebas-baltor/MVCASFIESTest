@@ -1,0 +1,70 @@
+﻿@model IEnumerable<MVCASFIES.Models.PDFEstiloVidaDato>
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Cliente.Id)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Cliente.Name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Cliente.ApellidoPaterno)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Cliente.ApellidoMaterno)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Cliente.FechaNacimiento)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.SumaAseguradaUDIS)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.SumaAseguradaPesos)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.MultiploSalarioAnual)
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Cliente.Id)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Cliente.Name)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Cliente.ApellidoMaterno)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Cliente.ApellidoPaterno)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Cliente.FechaNacimiento)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.SumaAseguradaUDIS)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.SumaAseguradaPesos)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.MultiploSalarioAnual)
+            </td>
+        </tr>
+    }
+
+</table>
+
+
+
